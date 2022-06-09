@@ -41,8 +41,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   static const String urll = 'https://jsonkeeper.com/b/16VC';
-
-  String token = '3e90d24a-3f1a-408e-ab9e-f5148ff557e7';
   Future<Welcome> getUserApi() async {
     final response = await http.get(Uri.parse(urll));
     var data = jsonDecode(response.body);
